@@ -1,7 +1,5 @@
 # Web dev in HTML5 Review Notes
-✨A bit review on HTML5 ✨
-✨by Stella Zhang✨
-✨06/23/2022✨
+✨A bit review on HTML5 ✨by Stella Zhang✨06/23/2022✨
 ## About
 
 <img align="right" width="200" height="183" src="https://cloud.githubusercontent.com/assets/532272/21507867/3376e9fe-cc4a-11e6-9350-7ec4f680da36.gif">

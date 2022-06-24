@@ -326,6 +326,65 @@
     </math>
     </p>
     </body>
+   <!--Input types-->
+   <body>
+
+    <h2>Input types practice</h2>
+    <p>The <strong>input type="text"</strong> defines a one-line text input field:</p>
+    
+    <form action="/action_page.php">
+      <label for="fname">First name:</label><br>
+      <input type="text" id="fname" name="fname"><br>
+      <label for="lname">Last name:</label><br>
+      <input type="text" id="lname" name="lname"><br><br>
+      <input type="month" id="start" name="start"
+       min="2018-03" value="2018-05">
+       <input type="week" name="week" id="camp-week"
+       min="2018-W18" max="2018-W26" required>
+      <input type="datetime-local" id="meeting-time"
+      name="meeting-time" value="2018-06-12T19:30"
+      min="2018-06-07T00:00" max="2018-06-14T00:00">
+      <input type="file"  id="avatar" name="avatar"  accept="image/png, image/jpeg">
+      <input type="image" id="image" alt="Login"
+       src="/media/examples/login-button.png">    
+      <input type="number" id="tentacles" name="tentacles"
+      min="10" max="100">
+      <input type="tel" id="phone" name="phone"
+       pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+       required>
+       <input type="url" name="url" id="url"
+       placeholder="https://example.com"
+       pattern="https://.*" size="30"
+       required>
+
+      <label for="avatar">Choose a profile picture:</label>
+
+
+      <input type="submit" value="Submit">
+    </form>
+    <HR>
+    <form>
+      <div>
+        <label for="title">Post title:</label>
+        <input type="text" id="title" name="title" value="My excellent blog post">
+      </div>
+      <div>
+        <label for="content">Post content:</label>
+        <textarea id="content" name="content" cols="60" rows="5">
+    This is the content of my excellent blog post. I hope you enjoy it!
+        </textarea>
+      </div>
+      <div>
+        <button type="submit">Update post</button>
+      </div>
+      <input type="hidden" id="postId" name="postId" value="34657">
+    </form>
+    
+    <p>Note that the form itself is not visible.</p>
+    <p>Also note that the default width of a text field is 20 characters.</p>
+    
+  </body>
+
 
  <style>
     #sudoku { border-collapse: collapse; border: solid thick; }
@@ -861,7 +920,18 @@
     </fieldset>
    </fieldset> 
   <hr>
+  <form>
+    <div class="controls">
 
+        <label for="id">User ID:</label>
+        <input type="text" id="id" name="id" />
+
+        <input type="reset" value="Reset">
+        <input type="submit" value="Submit">
+
+    </div>
+  </form>
+  <HR>
   <section class="progress window">
     <h1>Copying "Really Achieving Your Childhood Dreams"</h1>
     <details>
@@ -1009,4 +1079,5 @@
 
     </script>
     <hr>
+
 </html>

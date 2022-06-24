@@ -4,31 +4,30 @@
 
 <img align="right" width="200" height="183" src="https://cloud.githubusercontent.com/assets/532272/21507867/3376e9fe-cc4a-11e6-9350-7ec4f680da36.gif">
 
-When I was reviewing html, my mentor Camdyn recommeded me refering to a very useful and thorough document on  [whatwag](https://html.spec.whatwg.org/multipage/). 
+When I was reviewing html, my mentor Camdyn recommeded me refering to a very useful and thorough document on  [whatwag](https://html.spec.whatwg.org/multipage/) and [Mozilla](https://developer.mozilla.org/en-US/docs/Web/HTML/Element). 
 Here are some notes that I made while making an html site for practice reasons.
 ## Acknowledgement
 Most notes are stuff I find super important while browsing [whatwag](https://html.spec.whatwg.org/multipage/), and are 100% are quoted from the [whatwag](https://html.spec.whatwg.org/multipage/).
+Some coding examples are from both Whatwag and [Mozilla](https://developer.mozilla.org/en-US/docs/Web/HTML/Element).
 ## Table of Contents
-- [Basics](#Basics)
-- [Install](#install)
-- [Usage](#usage)
-  - [API](#api)
-  - [Configuration Options](#configuration-options)
-- [CLI Usage](#cli-usage)
-- [Transforms](#transforms)
-  - [> TOC](#-toc)
-  - [> CODE](#-code)
-  - [> FILE](#-file)
-  - [> REMOTE](#-remote)
-- [Inline transforms](#inline-transforms)
-- [🔌 Markdown magic plugins](#-markdown-magic-plugins)
-- [Adding Custom Transforms](#adding-custom-transforms)
-- [Plugin Example](#plugin-example)
-- [Other usage examples](#other-usage-examples)
-- [Custom Transform Demo](#custom-transform-demo)
-- [Prior Art](#prior-art)
-- [License](#license)
-- [Usage examples](#usage-examples)
+- [Basics](#basics)
+- [Attributes](#attributes)
+- [DOM Trees](#dom-trees)
+- [Writing secure applications with HTML:](#writing-secure-applications-with-html)
+    - [Basic Terminology](#basic-terminology)
+    - [Parallelism](#parallelism)
+    - [XML Compatibility](#xml-compatibility)
+    - [DOM Trees](#dom-trees)
+    - [Plugins:](#plugins)
+    - [Parallelism](#parallelism)
+    - [Character encodings](#character-encodings)
+    - [Conformance Classes:](#conformance-classes)
+    - [Common Microsyntaxes:](#common-microsyntaxes)
+- [Common pitfalls to avoid when using the scripting APIs](#common-pitfalls-to-avoid-when-using-the-scripting-apis)
+- [Common Infrastructures](#common-infrastructures)
+- [Emurated attributes](#emurated-attributes)
+- [HTML Elements](#html-elements)
+- [HTML Input types](#html-input-types)
 
 <!-- ⛔️ MD-MAGIC-EXAMPLE:END -->
 
@@ -1426,54 +1425,222 @@ The form element represents a hyperlink that can be manipulated through a collec
 ---
 
 
-### > FILE
+## HTML Input types
 
-## 🔌 Markdown magic plugins
+##  text
 
-* [wordcount](https://github.com/DavidWells/markdown-magic-wordcount/) - Add wordcount to markdown files
-* [github-contributors](https://github.com/DavidWells/markdown-magic-github-contributors) - List out the contributors of a given repository
-* [directory-tree](https://github.com/camacho/markdown-magic-directory-tree) - Add directory tree to markdown files
-* [install-command](https://github.com/camacho/markdown-magic-install-command) - Add install command to markdown files with `peerDependencies` included
-* [subpackage-list](https://github.com/camacho/markdown-magic-subpackage-list) - Add list of all subpackages (great for projects that use [Lerna](https://github.com/lerna/lerna))
-* [version-badge](https://github.com/camacho/markdown-magic-version-badge) - Add a badge with the latest version of the project
-* [template](https://github.com/camacho/markdown-magic-template) - Add Lodash template support
-* [dependency-table](https://github.com/camacho/markdown-magic-dependency-table) - Add a table of dependencies with links to their repositories, version information, and a short description
-* [package-scripts](https://github.com/camacho/markdown-magic-package-scripts) - Add a table of `package.json` scripts with descriptions
-* [prettier](https://github.com/camacho/markdown-magic-prettier) - Format code blocks with [`prettier`](https://github.com/prettier/prettier)
-* [engines](https://github.com/camacho/markdown-magic-engines) - Print engines list from `package.json`
-* [jsdoc](https://github.com/bradtaylorsf/markdown-magic-jsdoc) - Adds jsdoc comment support
-* [build-badge](https://github.com/rishichawda/markdown-magic-build-badge) - Update branch badges to auto-magically point to current branches.
-* [package-json](https://github.com/forresst/markdown-magic-package-json) - Add the package.json properties to markdown files
-* [local-image](https://github.com/stevenbenisek/markdown-magic-local-image)
-* [figlet](https://github.com/lafourchette/markdown-magic-figlet) - Add FIGfont text to markdown files
-* [local-image](https://github.com/stevenbenisek/markdown-magic-local-image) - plugin to add local images to markdown
-
-## Adding Custom Transforms
-
-## License
-
-[MIT][mit] © [DavidWells][author]
-
-[npm-badge]:https://img.shields.io/npm/v/markdown-magic.svg?style=flat-square
-[npm-link]: http://www.npmjs.com/package/markdown-magic
-[mit]:      http://opensource.org/licenses/MIT
-[author]:   http://github.com/davidwells
-
-## Usage examples
-
-- [Project using markdown-magic](https://github.com/search?o=desc&q=filename%3Apackage.json+%22markdown-magic%22&s=indexed&type=Code)
-- [Examples in md](https://github.com/search?l=Markdown&o=desc&q=AUTO-GENERATED-CONTENT&s=indexed&type=Code)
-
-
-## Misc Markdown helpers
-
-- https://github.com/azu/markdown-function
+**example**
 
 ```html
-<div>
-  <p>yo!</p>
+<form action="/action_page.php">
+  <label for="fname">First name:</label><br>
+  <input type="text" id="fname" name="fname"><br>
+  <label for="lname">Last name:</label><br>
+  <input type="text" id="lname" name="lname"><br><br>
+  <input type="submit" value="Submit">
+</form>
+```
+## submit
 
-</div>
+**example**
+
+```html
+  <input type="submit" value="Submit">
 ```
 
+## button
 
+**example**
+
+```html
+   <p><input type=button onclick="submit()" value="Add Coins"></p>
+```
+
+## datetime-local
+
+**example**
+
+```html
+    <p><label>Departure time: <input type=datetime-local name=totime step=3600></label></p>
+```
+## email
+
+**example**
+
+```html
+    <p><label>Address: <input type="email" name="address" placeholder="john@example.net"></label></p>
+```
+## file
+
+**example**
+
+```html
+  <input type="file"
+       id="avatar" name="avatar"
+       accept="image/png, image/jpeg">
+```
+## hidden
+A control that is not displayed but whose value is submitted to the server. There is an example in the next column, but it's hidden!	
+**example**
+
+```html
+ <form>
+  <div>
+    <label for="title">Post title:</label>
+    <input type="text" id="title" name="title" value="My excellent blog post">
+  </div>
+  <div>
+    <label for="content">Post content:</label>
+    <textarea id="content" name="content" cols="60" rows="5">
+This is the content of my excellent blog post. I hope you enjoy it!
+    </textarea>
+  </div>
+  <div>
+    <button type="submit">Update post</button>
+  </div>
+  <input type="hidden" id="postId" name="postId" value="34657">
+  </form>
+
+```
+## image
+
+**example**
+
+```html
+  <input type="image" id="image" alt="Login"
+       src="/media/examples/login-button.png">
+```
+
+## month
+
+**example**
+
+```html
+ <input type="month" id="start" name="start"
+       min="2018-03" value="2018-05">
+```
+
+## password
+
+**example**
+
+```html
+    <p><label>Password: <input type="password" name="password"></label></p>
+```
+
+## number
+A control for entering a number. Displays a spinner and adds default validation when supported. Displays a numeric keypad in some devices with dynamic keypads.
+**example**
+
+```html
+  <input type="number" id="tentacles" name="tentacles"
+       min="10" max="100">
+```
+## radio
+
+**example**
+
+```html
+   <fieldset>
+     <legend> Pizza Size </legend>
+     <p><label> <input type=radio name=size> Small </label></p>
+     <p><label> <input type=radio name=size> Medium </label></p>
+     <p><label> <input type=radio name=size> Large </label></p>
+    </fieldset>
+```
+## range
+
+**example**
+
+```html
+  <input type="range" name="a" list="a-values">
+  <datalist id="a-values">
+  <option value="10" label="Low">
+  <option value="90" label="High">
+  </datalist>
+```
+## reset
+
+**example**
+
+```html
+ <form>
+    <div class="controls">
+
+        <label for="id">User ID:</label>
+        <input type="text" id="id" name="id" />
+
+        <input type="reset" value="Reset">
+        <input type="submit" value="Submit">
+
+    </div>
+</form>
+
+```
+## search
+
+**example**
+
+```html
+  <label>Google: <input type="search" name="q"></label> <input type="submit" value="Search...">
+```
+## submit
+
+**example**
+
+```html
+  <input type="submit" value="Submit">
+```
+## tel
+
+**example**
+
+```html
+  <input type="tel" id="phone" name="phone"
+       pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+       required>
+```
+## text
+
+**example**
+
+```html
+  <p><label>Name: <input type="text" name="fullname" placeholder="Stella Zhang"></label></p>
+
+```
+## time
+
+**example**
+
+```html
+  <input name="sleepStart" type=time min="21:00" max="06:00" step="60" value="00:00">
+```
+## url
+
+**example**
+
+```html
+ <input type="url" name="url" id="url"
+       placeholder="https://example.com"
+       pattern="https://.*" size="30"
+       required>
+```
+## week
+
+**example**
+
+```html
+  <input type="week" name="week" id="camp-week"
+       min="2018-W18" max="2018-W26" required>
+```
+
+## daytime
+
+**example**
+
+```html
+ 
+<input type="datetime-local" id="meeting-time"
+       name="meeting-time" value="2018-06-12T19:30"
+       min="2018-06-07T00:00" max="2018-06-14T00:00">
+```

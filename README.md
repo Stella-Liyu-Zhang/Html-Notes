@@ -4,7 +4,7 @@
 
 <img align="right" width="200" height="183" src="https://cloud.githubusercontent.com/assets/532272/21507867/3376e9fe-cc4a-11e6-9350-7ec4f680da36.gif">
 
-When I was reviewing html, my mentor Camdyn recommeded me refering to a very useful and thorough document on  [whatwag](https://html.spec.whatwg.org/multipage/) and [Mozilla](https://developer.mozilla.org/en-US/docs/Web/HTML/Element). 
+When I was reviewing html, my mentor Camdyn recommended me to refer to a very useful and thorough document on [whatwag](https://html.spec.whatwg.org/multipage/) as well as [Mozilla](https://developer.mozilla.org/en-US/docs/Web/HTML/Element). 
 Here are some notes that I made while making an html site for practice reasons.
 ## Acknowledgement
 Most notes are stuff I find super important while browsing [whatwag](https://html.spec.whatwg.org/multipage/), and are 100% are quoted from the [whatwag](https://html.spec.whatwg.org/multipage/).
@@ -1654,6 +1654,7 @@ A control for entering a number. Displays a spinner and adds default validation 
        name="meeting-time" value="2018-06-12T19:30"
        min="2018-06-07T00:00" max="2018-06-14T00:00">
 ```
+<<<<<<< HEAD
 
 ## HTML Website notes after revision and review session with Camdyn on 6/24 and more work on 6/27
 ### Main structure: 
@@ -1699,3 +1700,5 @@ First, we see that
 ```
 ### 
 
+=======
+>>>>>>> 7f66302e968c683fed749b5504943179efc3721e

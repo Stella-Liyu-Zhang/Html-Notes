@@ -28,7 +28,7 @@ Some coding examples are from both Whatwag and [Mozilla](https://developer.mozil
 - [Emurated attributes](#emurated-attributes)
 - [HTML Elements](#html-elements)
 - [HTML Input types](#html-input-types)
-
+- [HTML Website notes after revision]()
 <!-- ⛔️ MD-MAGIC-EXAMPLE:END -->
 
 ## Basics
@@ -247,7 +247,9 @@ For this particular section, I will list the html element that I used in my site
 </head>
 ``` 
 ----
-- `base` the first base element with an href content attribute in a document tree has a frozen base URL
+- `base` the first base element with an href content attribute in a document tree has a frozen base URL. There could only be one single <base> element in a document, and it must be inside the <head> element. `href` attribute specifies the base URL for all relative URLs in the page, while the `target` attribute specifies the default target for all hyperlinks and forms in the page.
+
+
 
   **Example:**  
 ```html
@@ -258,18 +260,16 @@ For this particular section, I will list the html element that I used in my site
 ``` 
 ---
 - `link`:
+The <link> tag defines the relationship between the current document and an external resource. The <link> element is an empty element, it contains attributes only.
 
   **Example:**  
 ```html
 <head>
-    <title>Stella's landing page</title>
-    <base href="https://www.example.com/news/index.html">
-    <link rel="author's license" href="/about">
+  <link rel="stylesheet" href="styles.css">
 </head>
 ``` 
 ---
-- `meta`: -The meta element represents various kinds of metadata that cannot be expressed using the title, base, link, style, and script elements. 
-Exactly one of the name, http-equiv, charset, and itemprop attributes must be specified.
+- `meta`: -The meta element represents various kinds of metadata that cannot be expressed using the title, base, link, style, and script elements. Exactly one of the name, http-equiv, charset, and itemprop attributes must be specified.
 
 **Global attributes**
 - name — Metadata name
@@ -315,8 +315,7 @@ Exactly one of the name, http-equiv, charset, and itemprop attributes must be sp
    </article>
 ```
 ---
-- `section`: 
-
+- `section`:  Defines a section in html document
   **Example:**  
 ```html
  <section>
@@ -339,13 +338,15 @@ Exactly one of the name, http-equiv, charset, and itemprop attributes must be sp
             <h1>Simple shapes</h1>
             </section>
             <section>
-            <h1>Canvas coordinates</h1>
+            <h2>Canvas coordinates</h2>
             </section>
       </hgroup>
 ```
 ---
 - `nav`:
-
+The <nav> tag defines a set of navigation links.
+Notice that NOT all links of a document should be inside a <nav> element. The <nav> element is intended only for major block of navigation links.
+Browsers, such as screen readers for disabled users, can use this element to determine whether to omit the initial rendering of this content.
   **Example:**  
 
 ```html
@@ -362,6 +363,7 @@ Exactly one of the name, http-equiv, charset, and itemprop attributes must be sp
 ``` 
 ---
 - `footer`: 
+You can have several <footer> elements in one document. **Tip:** Contact information inside a <footer> element should go inside an <address> tag.
 
 **Example:** 
 ```html
@@ -370,7 +372,7 @@ Exactly one of the name, http-equiv, charset, and itemprop attributes must be sp
     </footer>
 ```
 ---
-- `span`: 
+- `span`: The <span> tag is much like the <div> element, but <div> is a block-level element and <span> is an inline element.
 
   **Example:**  
 
@@ -378,6 +380,16 @@ Exactly one of the name, http-equiv, charset, and itemprop attributes must be sp
         <span lang="fr"><abbr>M<sup>lle</sup></abbr> Gwendoline</span>
 ```
 ---
+-`Summary`: The <summary> tag defines a visible heading for the element. The heading can be clicked to view/hide the details.
+```html
+        <details>
+          <summary>TellaZ</summary>
+          <p>TellaZ stands for Stella Zhang.</p>
+        </details>
+```
+---
+**Example:**
+
 - ` h1, h2, h3, h4, h5, and h6`: These elements have a rank given by the number in their name. The h1 element is said to have the highest rank, the h6 element has the lowest rank, and two elements with the same name have equal rank.
 
   **Example:**  
@@ -390,26 +402,17 @@ Exactly one of the name, http-equiv, charset, and itemprop attributes must be sp
   </hgroup>
 ```
 ---
-- `footer`: 
-
-  **Example:**  
-
-```html
-<footer>
-     <p><small>© copyright 2022 PINT Random employee</small></p>
-</footer>
-```
----
 - `address`: 
+The <address> tag defines the contact information for the author/owner of a document or an article.
+The text in the <address> element usually renders in italic, and browsers will always add a line break before and after the <address> element.
 
   **Example:**  
 
 ```html
-<address>
-        <A href="../People/Raggett/">Stella Zhang</A>,
-        <A href="../People/Arnaud/">Kanye West</A>,
-        contact persons for the <A href="Activity">UCSD CSE Department</A>
-</address>
+    <address>
+      For more details, contact
+      <a href="mailto:js@example.com">John Smith</a>.
+    </address>
 ```
 ---
 - `aside`: The aside element represents a section of a page that consists of content that is tangentially related to the content around the aside element, and which could be considered separate from that content. Such sections are often represented as sidebars in printed typography.
@@ -417,7 +420,7 @@ Exactly one of the name, http-equiv, charset, and itemprop attributes must be sp
   **Example:**  
 
 ```html
-           <aside>
+            <aside>
                 <ins datetime="2005-03-16 00:00Z">
                  <p> I like fruit. </p>
                 </ins>
@@ -459,6 +462,13 @@ Exactly one of the name, http-equiv, charset, and itemprop attributes must be sp
                                    i := 1;
                                 end.</code>
         </pre>
+        <pre><samp>You are in an open field west of a big white house with a boarded
+          front door.
+          There is a small mailbox here.
+          ></samp> <kbd>open mailbox</kbd>
+          <samp>Opening the mailbox reveals:
+          A leaflet.
+        ></samp></pre>
 ```
 ---
 - `blockquote`:  The blockquote element represents a section that is quoted from another source.
@@ -485,7 +495,7 @@ Exactly one of the name, http-equiv, charset, and itemprop attributes must be sp
         </ol>
 ```
 ---
-- `ul`: The ul element represents a list of items, where the order of the items is not important — that is, where changing the order would not materially change the meaning of the document.
+- `ul`: The ul element represents a list of items, where the order of the items is not important — that is, where changing the order would not materially change the meaning of the document. Difference between ol and ul is that ol will make 1,2,3,4,... to record, and ul will just use dots in front of each items.
 
   **Example:**  
 
@@ -1644,3 +1654,48 @@ A control for entering a number. Displays a spinner and adds default validation 
        name="meeting-time" value="2018-06-12T19:30"
        min="2018-06-07T00:00" max="2018-06-14T00:00">
 ```
+
+## HTML Website notes after revision and review session with Camdyn on 6/24 and more work on 6/27
+### Main structure: 
+
+```html
+First, we see that 
+<!DOCTYPE html> 
+<html lang = "en">
+<head>
+     <meta charset="UTF-8">
+     <title>Document</title>
+</head>
+<body>
+    <header>
+
+    </header>
+</body>
+<main>
+  <article>
+    <h1></h1>
+    <p></p>
+    <nav><ol><li></li></ol></nav>
+    <section>
+      <h2></h2>
+      <h3></h3>
+    </section>
+
+  </article>
+  <aside>
+    </aside>
+</main>
+<footer>
+  
+  <div>
+    <form>
+      <label></label>
+      <input>
+      <input>
+      </form>
+    </div>
+</footer>
+</html>
+```
+### 
+

@@ -1,0 +1,95 @@
+<!-- <main> -->
+    <section>
+        <!--
+                References from previous agency development: 
+                https://www.twistbioscience.com/blog
+                https://www.xifin.com/resources/blog
+                https://www.glaukos.com/cornea/solutions/ilink/optometry-resources/
+
+        -->
+        <!--In almost all the sites we made, the blog section has its own page. So we will use a <h1> tag here.-->
+        <!--The title of the blog section followed by a one-sentence short introduction of the blog post section.-->
+        <h1>Featured blogs</h1>
+        <p>Stories from PINT's leading edge</p>
+        <!--The list of blogs starts here:-->
+        <ul>
+            <li>
+              <article>
+                <!--blog title will be an <h2> tag inside a clickable <a> tag that links to the full article.-->
+                <a href=""><h2>Title</h2></a>
+                <!--
+                    Note the readers of how long will it take to read this article;
+                    Could probably change the text to grey and make subtle.
+                -->
+                <p> 7 min read </p>
+                <!--
+                    Meta data tags of the blog for SEO reasons;
+                    Put into a list on a single line;
+                    Could probably change the text to grey and make subtle.
+                -->
+                <li>
+                    <i class="icon-tag"></i>
+                    <a href="">Web development</a>
+                    <a href="">User Interface</a>
+                    <a href="">UX research</a>
+                    <a href="">database</a>
+                    <a href="">tech consulting</a>
+                </li>
+                <p>Summary of the blog content</p>
+                <!--
+                    Could be made into a button in CSS;
+                    Link to the page where the full article sits. 
+                -->
+                <a href="#">Learn more …</a>
+                <!--
+                    Thumbnail image;
+                    Need to get optimized. 
+                -->
+                <img src="thumbnail.png" alt="image description">
+                <footer>
+                    <!--
+                        footer part: 
+                        a clickable link with <a> tag inside an address tag will point to the author's page if there is one;
+                        If not, no need to use the <a> tag and use <p> tag instead.
+                    -->
+                    <address class="author">By 
+                        <a rel="author" href="/author/Stella-Zhang">Stella Zhang</a>
+                    </address> 
+                    on 
+                    <time pubdate datetime="2022-08-29 10:00" title="August 29th, 2022">8/29/2022</time>
+                </footer>
+              </article>
+            </li>
+
+            <!--Repetition of the first blog post-->
+            <li>
+                <article>
+                  <a href="">
+                      <h2>Title</h2>
+                  </a>
+                  <p> 9 min read </p>
+                  <li>
+                      <i class="icon-tag"></i>
+                      <a href="">Website redesign</a>
+                      <a href="">UI design</a>
+                      <a href="">User Experience</a>
+                      <a href="">distributed system</a>
+                      <a href="">Customer Services</a>
+                  </li>
+                  <p>Summary of the blog content</p>
+                  <a href="#">Learn more …</a>
+                  <img src="thumbnail.png" alt="image description">
+                  <footer>
+                      <address class="author">By 
+                          <a rel="author" href="/author/Stella-Zhang">Camdyn Rasque</a>
+                      </address> 
+                      on 
+                      <time pubdate datetime="2022-08-29 10:00" title="August 29th, 2022">8/29/2022</time>
+                  </footer>
+                </article>
+              </li>  
+        </ul>
+        <!--If we didn't display all the blogs in the above section, we could specify here for the reader to visit all blogs-->
+        <a href="#">View all blogs</a>
+    </section>
+<!-- </main> -->

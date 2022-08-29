@@ -375,6 +375,14 @@ section{
     color:rgb(60,60, 60);
     display: flex;
 }
+/*clients-wrapper*/
+.clients-wrapper{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    padding: 2em;
+    grid-auto-rows: 10rem;
+    column-gap: 6em;
+}
 /*Experiences styling*/
 #experience{
     background-color: rgb(255, 255, 255);

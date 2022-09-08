@@ -9,26 +9,70 @@ Here are some notes that I made while making an html site for practice reasons.
 ## Acknowledgement
 Most notes are stuff I find super important while browsing [whatwag](https://html.spec.whatwg.org/multipage/), and are 100% are quoted from the [whatwag](https://html.spec.whatwg.org/multipage/).
 Some coding examples are from both Whatwag and [Mozilla](https://developer.mozilla.org/en-US/docs/Web/HTML/Element).
+
+### 9/8 notes:
+Stuff I fixed in this commit:
+- **Line 13, 14**: `<ul> <li>` ----> `<pint-grid>` and `<pint-col>` (articles be treated as ```<pint-card>```)
+- **Line 16**: Use a picture element to wrap up `<img>` element
+- **Line 16**: Thumbnail image be put on top of the blog card
+- **Line 20**: `<a>` tag inside `<h2>`
+- **Line 27**: Using `<time>` element to represent time
+- **Line 37**: Change from `<i>` to `<svg>` element to better present vector-based graphics
+- **Line 60**: Learn more should be put in the footer
+- **Line 69**: `pubdate` is deprecated, removed
+- **Line 69**: get rid of `itempop="datePublished"` in `<time>` element
 ## Table of Contents
-- [Basics](#basics)
-- [Attributes](#attributes)
-- [DOM Trees](#dom-trees)
-- [Writing secure applications with HTML:](#writing-secure-applications-with-html)
-    - [Basic Terminology](#basic-terminology)
-    - [Parallelism](#parallelism)
-    - [XML Compatibility](#xml-compatibility)
-    - [DOM Trees](#dom-trees)
-    - [Plugins:](#plugins)
-    - [Parallelism](#parallelism)
-    - [Character encodings](#character-encodings)
-    - [Conformance Classes:](#conformance-classes)
-    - [Common Microsyntaxes:](#common-microsyntaxes)
-- [Common pitfalls to avoid when using the scripting APIs](#common-pitfalls-to-avoid-when-using-the-scripting-apis)
-- [Common Infrastructures](#common-infrastructures)
-- [Emurated attributes](#emurated-attributes)
-- [HTML Elements](#html-elements)
-- [HTML Input types](#html-input-types)
-- [HTML Website notes after revision]()
+- [Web dev in HTML5 Review Notes](#web-dev-in-html5-review-notes)
+  - [About](#about)
+  - [Acknowledgement](#acknowledgement)
+    - [9/8 notes:](#98-notes)
+  - [Table of Contents](#table-of-contents)
+  - [Basics](#basics)
+  - [Attributes](#attributes)
+  - [Dom Trees](#dom-trees)
+    - [Example of a DOM Tree:](#example-of-a-dom-tree)
+  - [Writing secure applications with HTML:](#writing-secure-applications-with-html)
+  - [Common pitfalls to avoid when using the scripting APIs](#common-pitfalls-to-avoid-when-using-the-scripting-apis)
+  - [Common Infrastructures:](#common-infrastructures)
+    - [**Basic Terminology**](#basic-terminology)
+    - [**Parallelism**](#parallelism)
+    - [**XML Compatibility**](#xml-compatibility)
+    - [DOM Trees](#dom-trees-1)
+    - [**Plugins**:](#plugins)
+    - [**Character encodings:**](#character-encodings)
+    - [**Conformance Classes:**](#conformance-classes)
+    - [**Common Microsyntaxes:**](#common-microsyntaxes)
+  - [Emurated attributes](#emurated-attributes)
+    - [Semantics, structure, and APIs of HTML documents](#semantics-structure-and-apis-of-html-documents)
+    - [> HTML Elements](#-html-elements)
+  - [The followings are Grouping content elements:](#the-followings-are-grouping-content-elements)
+  - [## The following elements are Text-level semantics](#-the-following-elements-are-text-level-semantics)
+  - [HTML Input types](#html-input-types)
+  - [text](#text)
+  - [submit](#submit)
+  - [button](#button)
+  - [datetime-local](#datetime-local)
+  - [email](#email)
+  - [file](#file)
+  - [hidden](#hidden)
+  - [image](#image)
+  - [month](#month)
+  - [password](#password)
+  - [number](#number)
+  - [radio](#radio)
+  - [range](#range)
+  - [reset](#reset)
+  - [search](#search)
+  - [submit](#submit-1)
+  - [tel](#tel)
+  - [text](#text-1)
+  - [time](#time)
+  - [url](#url)
+  - [week](#week)
+  - [daytime](#daytime)
+  - [HTML Website notes after revision and review session with Camdyn on 6/24 and more work on 6/27](#html-website-notes-after-revision-and-review-session-with-camdyn-on-624-and-more-work-on-627)
+    - [Main structure:](#main-structure)
+    - [](#)
 <!-- ⛔️ MD-MAGIC-EXAMPLE:END -->
 
 ## Basics
